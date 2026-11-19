@@ -1,0 +1,46 @@
+{
+  "name": "@dodaijs/cli",
+  "version": "0.1.0",
+  "description": "Command line for dodai: diff, apply, verify and generate row types from a SQLite schema",
+  "keywords": [
+    "cli",
+    "cloudflare",
+    "durable-objects",
+    "migration",
+    "schema",
+    "sqlite"
+  ],
+  "homepage": "https://github.com/dodaijs/dodai/tree/main/packages/cli#readme",
+  "bugs": {
+    "url": "https://github.com/dodaijs/dodai/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ktsujichan",
+    "url": "https://github.com/ktsujichan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodaijs/dodai.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "dodai": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dodaijs/core": "workspace:^",
+    "yaml": "^2.9.1"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

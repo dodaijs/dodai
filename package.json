@@ -1,0 +1,25 @@
+{
+  "name": "dodai-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r build && pnpm -r test",
+    "typecheck": "pnpm -r build && pnpm -r typecheck",
+    "lint": "oxlint . && oxfmt --check .",
+    "format": "oxfmt .",
+    "release": "pnpm build && node scripts/publish.mjs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@types/node": "^24.19.2",
+    "oxfmt": "^0.79.0",
+    "oxlint": "^1.94.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

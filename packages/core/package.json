@@ -1,0 +1,48 @@
+{
+  "name": "@dodaijs/core",
+  "version": "0.1.0",
+  "description": "Declarative schema management for Cloudflare Durable Objects SQLite",
+  "keywords": [
+    "cloudflare",
+    "declarative",
+    "durable-objects",
+    "migration",
+    "schema",
+    "sqlite"
+  ],
+  "homepage": "https://github.com/dodaijs/dodai/tree/main/packages/core#readme",
+  "bugs": {
+    "url": "https://github.com/dodaijs/dodai/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ktsujichan",
+    "url": "https://github.com/ktsujichan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodaijs/dodai.git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p test/workers",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "0.22.0",
+    "@cloudflare/workers-types": "5.20261009.1",
+    "wrangler": "4.149.0"
+  }
+}
